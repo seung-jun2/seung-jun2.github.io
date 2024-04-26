@@ -1,16 +1,8 @@
-# Compiled class file
-*.class
+.DS_Store
 
-# Log files
-*.log
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
 
-# IntelliJ IDEA files
-.idea/
-
-# Eclipse files
-.classpath
-.project
-.settings/
-
-# Maven
-target/
+Gemfile.lock
