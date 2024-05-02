@@ -54,3 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var skillBars = document.querySelectorAll('.skill-bar');
+
+    skillBars.forEach(function(skillBar) {
+        var percent = skillBar.dataset.percent;
+        skillBar.style.width = percent + '%';
+    });
+});

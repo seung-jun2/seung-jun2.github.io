@@ -13,6 +13,27 @@ header {
     align-items: center;
 }
 
+#about-me,
+#education {
+    text-align: center; /* 내부 요소들을 가운데 정렬합니다. */
+}
+
+#about-me h2 {
+    margin-top: -30px;
+}
+
+#education h2 {
+    margin-top: -30px;
+}
+
+#projects h2 {
+    margin-top: -30px;
+}
+
+#Contact h2 {
+    margin-top: -30px;
+}
+
 .portfolio-title {
     margin: 0;
 }
@@ -60,12 +81,12 @@ p {
     display: none;
     position: fixed;
     z-index: 1;
-    left: 0;
-    top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    overflow: auto;
+    overflow: hidden;
 }
 
 .modal-content {
@@ -124,6 +145,15 @@ p {
 
 .project-card:last-child {
     margin-right: 0;
+}
+
+.project-card h4 {
+    opacity: 0; /* 기본적으로 글씨를 숨깁니다. */
+    transition: opacity 0.3s ease; /* 부드러운 효과를 추가합니다. */
+}
+
+.project-card:hover h4 {
+    opacity: 1; /* 마우스가 요소 위에 있을 때 글씨를 보이도록 설정합니다. */
 }
 
 .styled-link {
@@ -191,6 +221,7 @@ p {
     position: relative; /* 상대 위치 설정 */
 }
 
+
 #skills h2 {
     position: absolute; /* 절대 위치 설정 */
     top: -10px; /* 위쪽으로 이동 */
@@ -199,11 +230,18 @@ p {
 }
 
 .skill-category {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    align-items: center; /* 아이템 가운데 정렬 */
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.skill-category:nth-child(-n+2) {
+    width: calc(50% - 20px); /* 처음 두 개의 카테고리는 가로로 나열 */
+    margin-right: -50px; /* 각 카테고리 사이의 간격 설정 */
+}
+
+.skill-category:nth-child(n+3) {
+    width: calc(100% / 3 - 20px); /* 나머지 세 개의 카테고리는 세 개의 카테고리가 가로로 나열될 수 있도록 설정 */
+    margin-top: 0; /* 위쪽 여백 추가 */
 }
 
 .skill-category h3 {
@@ -211,9 +249,27 @@ p {
     margin-bottom: 10px;
 }
 
-.icon-container {
-    margin-right: 10px;
+.skill {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
+}
+
+.icon-container {
+    margin-right: 15px;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #ccc;
+    margin-right: 10px;
+    max-width: 350px;
+}
+
+.skill span {
+    margin-left: 5px;
+    min-width: 40px;
+    width: 40px;
 }
 
 #Contact {
@@ -238,5 +294,6 @@ p {
 .contact-item a:hover img {
     filter: brightness(50%);
 }
+
 
 
