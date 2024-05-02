@@ -35,3 +35,22 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('dark-mode');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarLinks = document.querySelectorAll('#navbar a');
+
+    navbarLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 동작 방지
+
+            const targetId = this.getAttribute('href'); // 클릭한 링크의 href 속성 값 (섹션 ID)
+            const targetSection = document.querySelector(targetId); // 해당 섹션 요소 가져오기
+
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth' // 부드러운 스크롤링 적용
+                });
+            }
+        });
+    });
+});
