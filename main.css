@@ -1,0 +1,242 @@
+body {
+    font-family: 'Lato', sans-serif; /* 고정폭 폰트 선택 */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* 약간의 회색 배경 추가 */
+}
+header {
+    background-color: #2abc;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio-title {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2ecc71;
+}
+
+section {
+    background-color: white;
+    padding: 50px 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #34495e;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Your existing CSS styles */
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    width: calc(50% - 20px); /* 2개씩 나열하고 간격을 두어 가로 정렬 */
+    max-width: 400px; /* 최대 너비 */
+    box-sizing: border-box;
+    text-align: center; /* 가운데 정렬 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* 줄 바꿈 설정 */
+    justify-content: space-between; /* 여백을 두어 가로 정렬 */
+}
+
+.project-card:last-child {
+    margin-right: 0;
+}
+
+.styled-link {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.styled-link:hover {
+    color: #0056b3;
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+.icon {
+    width: 24px; /* 원하는 크기로 조절하세요 */
+    height: 24px; /* 원하는 크기로 조절하세요 */
+    fill: currentColor; /* 아이콘 색상을 부모 요소의 색상으로 설정 */
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #212121; /* 어두운 배경 색상 */
+    color: #fff; /* 밝은 텍스트 색상 */
+}
+
+.dark-mode header {
+    background-color: #333; /* 어두운 헤더 배경 색상 */
+}
+
+.dark-mode nav ul li a {
+    color: #fff; /* 밝은 텍스트 색상 */
+}
+
+.dark-mode section {
+    background-color: #424242; /* 어두운 섹션 배경 색상 */
+}
+
+.dark-mode .modal-content {
+    background-color: #757575; /* 어두운 모달 내용 배경 색상 */
+}
+
+.dark-mode .close {
+    color: #ddd; /* 어두운 닫기 아이콘 색상 */
+}
+
+.dark-mode .styled-link {
+    color: #64b5f6; /* 어두운 링크 색상 */
+}
+
+.dark-mode .styled-link:hover {
+    color: #42a5f5; /* 어두운 링크 호버 색상 */
+}
+
+.dark-mode h2 {
+    color: white;
+}
+
+#skills {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 가운데 정렬 */
+    text-align: center; /* 텍스트도 가운데 정렬 */
+    position: relative; /* 상대 위치 설정 */
+}
+
+#skills h2 {
+    position: absolute; /* 절대 위치 설정 */
+    top: -10px; /* 위쪽으로 이동 */
+    left: 50%; /* 가운데 정렬을 위한 위치 */
+    transform: translateX(-50%); /* 가운데 정렬을 위한 위치 */
+}
+
+.skill-category {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: center; /* 아이템 가운데 정렬 */
+}
+
+.skill-category h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.icon-container {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#Contact {
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.contact-item img {
+    margin-right: 10px;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+.contact-item a:hover img {
+    filter: brightness(50%);
+}
+
+
