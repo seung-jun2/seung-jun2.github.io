@@ -49,26 +49,27 @@ header {
 
 
 #education {
-    text-align: center; /* 내용을 가운데 정렬합니다. */
-    padding: 50px; /* 내용 주위에 여백을 추가합니다. */
+    margin-bottom: 20px;
 }
 
 .education-info {
-    max-width: 600px; /* 최대 너비를 지정하여 너비를 제한합니다. */
-    margin: 0 auto; /* 가운데 정렬을 위해 왼쪽과 오른쪽에 자동으로 여백을 추가합니다. */
-    text-align: left; /* 내부 텍스트를 왼쪽 정렬합니다. */
+    padding: 20px;
+    text-align: center;
+}
+
+.education-details {
+    margin-left: 20px;
 }
 
 .education-info h3 {
-    margin-top: 50px; /* 제목 위에 여백을 제거합니다. */
-    text-align: center;
-
+    margin-top: 0;
 }
 
 .education-info p {
-    margin: 5px 0; /* 단락 사이에 간격을 추가합니다. */
-    margin-left: 220px; /* 왼쪽 여백을 0으로 설정하여 텍스트를 왼쪽으로 이동시킵니다. */
+    margin: 5px 0;
 }
+
+
 
 
 #about-me h2 {
@@ -267,8 +268,6 @@ p {
     color: white;
 }
 
-
-
 #skills {
     margin-top: 10px;
     display: flex;
@@ -276,6 +275,7 @@ p {
     justify-content: center; /* 가운데 정렬 */
     text-align: center; /* 텍스트도 가운데 정렬 */
     position: relative; /* 상대 위치 설정 */
+    padding-left: 150px;
 }
 
 #skills h2 {
