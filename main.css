@@ -64,6 +64,21 @@ a:hover {
     color: #0066ff;
 }
 
+@media only screen and (max-width: 768px) {
+    .profile-info {
+        width: 100%;
+    }
+
+    .info {
+        max-width: 100%;
+    }
+
+    .profile-pic img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 
 #education {
     margin-bottom: 20px;
