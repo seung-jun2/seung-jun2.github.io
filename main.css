@@ -125,6 +125,13 @@ a:hover {
     margin-right: 10px; /* 변경된 부분: 목록 항목 간의 간격 조정 */
 }
 
+@media only screen and (max-width: 768px) {
+    .education-info {
+        width: 100%;
+    }
+
+}
+
 
 #about-me h2 {
     margin-top: -30px;
